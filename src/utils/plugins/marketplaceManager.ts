@@ -227,9 +227,7 @@ export function saveMarketplaceToSettings(
   name: string,
   entry: DeclaredMarketplace,
   settingSource:
-    | 'userSettings'
-    | 'projectSettings'
-    | 'localSettings' = 'userSettings',
+    'userSettings' | 'projectSettings' | 'localSettings' = 'userSettings',
 ): void {
   const existing = getSettingsForSource(settingSource) ?? {}
   const current = { ...existing.extraKnownMarketplaces }

@@ -1191,8 +1191,7 @@ export function setLastAPIRequestMessages(
 }
 
 export function getLastAPIRequestMessages():
-  | BetaMessageStreamParams['messages']
-  | null {
+  BetaMessageStreamParams['messages'] | null {
   return STATE.lastAPIRequestMessages
 }
 

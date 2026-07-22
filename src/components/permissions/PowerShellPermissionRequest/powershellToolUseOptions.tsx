@@ -4,10 +4,7 @@ import { shouldShowAlwaysAllowOptions } from '../../../utils/permissions/permiss
 import type { OptionWithDescription } from '../../CustomSelect/select.js'
 import { generateShellSuggestionsLabel } from '../shellPermissionHelpers.js'
 export type PowerShellToolUseOption =
-  | 'yes'
-  | 'yes-apply-suggestions'
-  | 'yes-prefix-edited'
-  | 'no'
+  'yes' | 'yes-apply-suggestions' | 'yes-prefix-edited' | 'no'
 export function powershellToolUseOptions({
   suggestions = [],
   onRejectFeedbackChange,

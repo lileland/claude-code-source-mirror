@@ -8,11 +8,7 @@ import { getGraphemeSegmenter } from '../utils/intl.js'
 
 /** Bridge status state machine states. */
 export type StatusState =
-  | 'idle'
-  | 'attached'
-  | 'titled'
-  | 'reconnecting'
-  | 'failed'
+  'idle' | 'attached' | 'titled' | 'reconnecting' | 'failed'
 
 /** How long a tool activity line stays visible after last tool_start (ms). */
 export const TOOL_DISPLAY_EXPIRY_MS = 30_000

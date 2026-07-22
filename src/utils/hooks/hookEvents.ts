@@ -49,9 +49,7 @@ export type HookResponseEvent = {
 }
 
 export type HookExecutionEvent =
-  | HookStartedEvent
-  | HookProgressEvent
-  | HookResponseEvent
+  HookStartedEvent | HookProgressEvent | HookResponseEvent
 export type HookEventHandler = (event: HookExecutionEvent) => void
 
 const pendingEvents: HookExecutionEvent[] = []

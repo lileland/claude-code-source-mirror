@@ -1339,8 +1339,7 @@ const NO_CACHED_AUTO_MODE_CONFIG = Symbol('no-cached-auto-mode-config')
  * defers to verifyAutoModeGateAccess, the latter blocks immediately.
  */
 export function getAutoModeEnabledStateIfCached():
-  | AutoModeEnabledState
-  | undefined {
+  AutoModeEnabledState | undefined {
   const config = getFeatureValue_CACHED_MAY_BE_STALE<
     { enabled?: AutoModeEnabledState } | typeof NO_CACHED_AUTO_MODE_CONFIG
   >('tengu_auto_mode_config', NO_CACHED_AUTO_MODE_CONFIG)

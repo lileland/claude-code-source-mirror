@@ -4657,10 +4657,7 @@ export function REPL({
               const source = {
                 type: 'base64' as const,
                 media_type: (pasted.mediaType ?? 'image/png') as
-                  | 'image/jpeg'
-                  | 'image/png'
-                  | 'image/gif'
-                  | 'image/webp',
+                  'image/jpeg' | 'image/png' | 'image/gif' | 'image/webp',
                 data: pasted.content,
               }
               contentBlocks.push({
@@ -6351,8 +6348,7 @@ export function REPL({
                             },
                           ],
                           behavior: (allow ? 'allow' : 'deny') as
-                            | 'allow'
-                            | 'deny',
+                            'allow' | 'deny',
                           destination: 'localSettings' as const,
                         }
                         setAppState(prev => ({

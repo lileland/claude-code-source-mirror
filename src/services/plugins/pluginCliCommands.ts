@@ -38,12 +38,7 @@ import {
 export { VALID_INSTALLABLE_SCOPES, VALID_UPDATE_SCOPES }
 
 type PluginCliCommand =
-  | 'install'
-  | 'uninstall'
-  | 'enable'
-  | 'disable'
-  | 'disable-all'
-  | 'update'
+  'install' | 'uninstall' | 'enable' | 'disable' | 'disable-all' | 'update'
 
 /**
  * Generic error handler for plugin CLI commands. Emits

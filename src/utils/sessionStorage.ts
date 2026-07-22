@@ -99,10 +99,7 @@ import { validateUuid } from './uuid.js'
 const VERSION = typeof MACRO !== 'undefined' ? MACRO.VERSION : 'unknown'
 
 type Transcript = (
-  | UserMessage
-  | AssistantMessage
-  | AttachmentMessage
-  | SystemMessage
+  UserMessage | AssistantMessage | AttachmentMessage | SystemMessage
 )[]
 
 // Use getOriginalCwd() at each call site instead of capturing at module load

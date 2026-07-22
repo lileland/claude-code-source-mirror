@@ -25,8 +25,7 @@ export type UserMessage = MessageBase & {
   type: 'user'
   message: {
     content:
-      | string
-      | Array<{ type: string; text?: string; [key: string]: unknown }>
+      string | Array<{ type: string; text?: string; [key: string]: unknown }>
     [key: string]: unknown
   }
 }

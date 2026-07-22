@@ -71,8 +71,7 @@ export function dispatchClick(
   let handled = false
   while (target) {
     const handler = target._eventHandlers?.onClick as
-      | ((event: ClickEvent) => void)
-      | undefined
+      ((event: ClickEvent) => void) | undefined
     if (handler) {
       handled = true
       const rect = nodeCache.get(target)

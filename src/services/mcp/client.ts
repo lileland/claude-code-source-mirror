@@ -3168,8 +3168,7 @@ async function callMCPTool({
       content,
       _meta: result._meta as Record<string, unknown> | undefined,
       structuredContent: result.structuredContent as
-        | Record<string, unknown>
-        | undefined,
+        Record<string, unknown> | undefined,
     }
   } catch (e) {
     // Clear intervals on error

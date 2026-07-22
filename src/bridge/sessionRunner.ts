@@ -416,8 +416,7 @@ export function createSessionSpawner(deps: SessionSpawnerDeps): SessionSpawner {
 
               if (msg.type === 'control_request') {
                 const request = msg.request as
-                  | Record<string, unknown>
-                  | undefined
+                  Record<string, unknown> | undefined
                 if (
                   request?.subtype === 'can_use_tool' &&
                   deps.onPermissionRequest

@@ -19,13 +19,7 @@ function getExtensionIds(): string[] {
 
 // Must match ChromiumBrowser from common.ts
 export type ChromiumBrowser =
-  | 'chrome'
-  | 'brave'
-  | 'arc'
-  | 'chromium'
-  | 'edge'
-  | 'vivaldi'
-  | 'opera'
+  'chrome' | 'brave' | 'arc' | 'chromium' | 'edge' | 'vivaldi' | 'opera'
 
 export type BrowserPath = {
   browser: ChromiumBrowser

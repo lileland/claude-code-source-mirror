@@ -339,8 +339,7 @@ export class StructuredIO {
     }
     try {
       const message = normalizeControlMessageKeys(jsonParse(line)) as
-        | StdinMessage
-        | SDKMessage
+        StdinMessage | SDKMessage
       if (message.type === 'keep_alive') {
         // Silently ignore keep-alive messages
         return undefined

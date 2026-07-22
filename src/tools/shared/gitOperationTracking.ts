@@ -35,12 +35,7 @@ const GIT_REBASE_RE = gitCmdRe('rebase')
 export type CommitKind = 'committed' | 'amended' | 'cherry-picked'
 export type BranchAction = 'merged' | 'rebased'
 export type PrAction =
-  | 'created'
-  | 'edited'
-  | 'merged'
-  | 'commented'
-  | 'closed'
-  | 'ready'
+  'created' | 'edited' | 'merged' | 'commented' | 'closed' | 'ready'
 
 const GH_PR_ACTIONS: readonly { re: RegExp; action: PrAction; op: string }[] = [
   { re: /\bgh\s+pr\s+create\b/, action: 'created', op: 'pr_create' },

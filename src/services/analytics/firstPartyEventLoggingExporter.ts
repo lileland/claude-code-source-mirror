@@ -645,8 +645,7 @@ export class FirstPartyEventLoggingExporter implements LogRecordExporter {
         const timestamp = this.hrTimeToDate(log.hrTime)
         const account_uuid = attributes.account_uuid as string | undefined
         const organization_uuid = attributes.organization_uuid as
-          | string
-          | undefined
+          string | undefined
         events.push({
           event_type: 'GrowthbookExperimentEvent',
           event_data: GrowthbookExperimentEvent.toJSON({

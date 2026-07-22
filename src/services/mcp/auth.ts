@@ -639,10 +639,7 @@ type WWWAuthenticateParams = {
 }
 
 type XaaFailureStage =
-  | 'idp_login'
-  | 'discovery'
-  | 'token_exchange'
-  | 'jwt_bearer'
+  'idp_login' | 'discovery' | 'token_exchange' | 'jwt_bearer'
 
 /**
  * XAA (Cross-App Access) auth.

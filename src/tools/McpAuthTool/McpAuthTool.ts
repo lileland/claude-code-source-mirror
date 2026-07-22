@@ -108,8 +108,7 @@ export function createMcpAuthTool(
       }
 
       const sseOrHttpConfig = config as (
-        | McpSSEServerConfig
-        | McpHTTPServerConfig
+        McpSSEServerConfig | McpHTTPServerConfig
       ) & { scope: ScopedMcpServerConfig['scope'] }
 
       // Mirror cli/print.ts mcp_authenticate: start the flow, capture the

@@ -28,9 +28,7 @@ export const CUSTOM_BORDER_STYLES = {
 } as const
 
 export type BorderStyle =
-  | keyof Boxes
-  | keyof typeof CUSTOM_BORDER_STYLES
-  | BoxStyle
+  keyof Boxes | keyof typeof CUSTOM_BORDER_STYLES | BoxStyle
 
 function embedTextInBorder(
   borderLine: string,

@@ -19,11 +19,7 @@ import { Byline } from '../design-system/Byline.js'
 import { Dialog } from '../design-system/Dialog.js'
 import { KeyboardShortcutHint } from '../design-system/KeyboardShortcutHint.js'
 export type GroveDecision =
-  | 'accept_opt_in'
-  | 'accept_opt_out'
-  | 'defer'
-  | 'escape'
-  | 'skip_rendering'
+  'accept_opt_in' | 'accept_opt_out' | 'defer' | 'escape' | 'skip_rendering'
 type Props = {
   showIfAlreadyViewed: boolean
   location: 'settings' | 'policy_update_modal' | 'onboarding'

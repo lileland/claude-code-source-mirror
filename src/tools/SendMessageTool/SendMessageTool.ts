@@ -125,10 +125,7 @@ export type ResponseOutput = {
 }
 
 export type SendMessageToolOutput =
-  | MessageOutput
-  | BroadcastOutput
-  | RequestOutput
-  | ResponseOutput
+  MessageOutput | BroadcastOutput | RequestOutput | ResponseOutput
 
 function findTeammateColor(
   appState: {

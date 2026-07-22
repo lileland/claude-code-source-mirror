@@ -70,11 +70,7 @@ export type LoadedPlugin = {
 }
 
 export type PluginComponent =
-  | 'commands'
-  | 'agents'
-  | 'skills'
-  | 'hooks'
-  | 'output-styles'
+  'commands' | 'agents' | 'skills' | 'hooks' | 'output-styles'
 
 /**
  * Discriminated union of plugin error types.

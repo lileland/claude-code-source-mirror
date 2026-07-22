@@ -320,7 +320,7 @@ export function findPlainTextUrlAt(
   const schemeRe = /(?:https?|file):\/\//g
   let urlStart = -1
   let urlEnd = token.length
-  for (let m; (m = schemeRe.exec(token)); ) {
+  for (let m; (m = schemeRe.exec(token));) {
     if (m.index > clickIdx) {
       urlEnd = m.index
       break
@@ -423,12 +423,7 @@ export function extendSelection(
 /** Semantic keyboard focus moves. See moveSelectionFocus in ink.tsx for
  *  how screen bounds + row-wrap are applied. */
 export type FocusMove =
-  | 'left'
-  | 'right'
-  | 'up'
-  | 'down'
-  | 'lineStart'
-  | 'lineEnd'
+  'left' | 'right' | 'up' | 'down' | 'lineStart' | 'lineEnd'
 
 /**
  * Set focus to (col, row) for keyboard selection extension (shift+arrow).

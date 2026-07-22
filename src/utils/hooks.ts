@@ -676,8 +676,7 @@ function processHookJSONOutput({
           result.elicitationResponse = {
             action: json.hookSpecificOutput.action,
             content: json.hookSpecificOutput.content as
-              | ElicitationResponse['content']
-              | undefined,
+              ElicitationResponse['content'] | undefined,
           }
           if (json.hookSpecificOutput.action === 'decline') {
             result.blockingError = {
@@ -692,8 +691,7 @@ function processHookJSONOutput({
           result.elicitationResultResponse = {
             action: json.hookSpecificOutput.action,
             content: json.hookSpecificOutput.content as
-              | ElicitationResponse['content']
-              | undefined,
+              ElicitationResponse['content'] | undefined,
           }
           if (json.hookSpecificOutput.action === 'decline') {
             result.blockingError = {
@@ -2121,9 +2119,7 @@ async function* executeHooks({
   // hooks in this batch (hookInput is never mutated). Callback/function hooks
   // return before reaching this, so batches with only those pay no stringify cost.
   let jsonInputResult:
-    | { ok: true; value: string }
-    | { ok: false; error: unknown }
-    | undefined
+    { ok: true; value: string } | { ok: false; error: unknown } | undefined
   function getJsonInput() {
     if (jsonInputResult !== undefined) {
       return jsonInputResult

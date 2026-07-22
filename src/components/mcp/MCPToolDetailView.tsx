@@ -206,8 +206,7 @@ export function MCPToolDetailView(t0) {
             {Object.entries(tool.inputJSONSchema.properties).map(t17 => {
               const [key, value] = t17
               const required = tool.inputJSONSchema?.required as
-                | string[]
-                | undefined
+                string[] | undefined
               const isRequired = required?.includes(key)
               return (
                 <Text key={key}>

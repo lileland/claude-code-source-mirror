@@ -24,11 +24,7 @@ export type ServerConfig = {
 }
 
 export type SessionState =
-  | 'starting'
-  | 'running'
-  | 'detached'
-  | 'stopping'
-  | 'stopped'
+  'starting' | 'running' | 'detached' | 'stopping' | 'stopped'
 
 export type SessionInfo = {
   id: string

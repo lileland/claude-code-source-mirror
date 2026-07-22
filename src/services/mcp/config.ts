@@ -585,9 +585,7 @@ function expandEnvVars(config: McpServerConfig): {
     case 'http':
     case 'ws': {
       const remoteConfig = config as
-        | McpSSEServerConfig
-        | McpHTTPServerConfig
-        | McpWebSocketServerConfig
+        McpSSEServerConfig | McpHTTPServerConfig | McpWebSocketServerConfig
       expanded = {
         ...remoteConfig,
         url: expandString(remoteConfig.url),

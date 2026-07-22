@@ -23,8 +23,7 @@ export type PDFError = {
 }
 
 export type PDFResult<T> =
-  | { success: true; data: T }
-  | { success: false; error: PDFError }
+  { success: true; data: T } | { success: false; error: PDFError }
 
 /**
  * Read a PDF file and return it as base64-encoded data.

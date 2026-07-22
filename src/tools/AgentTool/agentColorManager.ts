@@ -2,14 +2,7 @@ import { getAgentColorMap } from '../../bootstrap/state.js'
 import type { Theme } from '../../utils/theme.js'
 
 export type AgentColorName =
-  | 'red'
-  | 'blue'
-  | 'green'
-  | 'yellow'
-  | 'purple'
-  | 'orange'
-  | 'pink'
-  | 'cyan'
+  'red' | 'blue' | 'green' | 'yellow' | 'purple' | 'orange' | 'pink' | 'cyan'
 
 export const AGENT_COLORS: readonly AgentColorName[] = [
   'red',

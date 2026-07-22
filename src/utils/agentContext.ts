@@ -139,8 +139,7 @@ export function isTeammateAgentContext(
  * and custom agents are always mapped to the literal "user-defined".
  */
 export function getSubagentLogName():
-  | AnalyticsMetadata_I_VERIFIED_THIS_IS_NOT_CODE_OR_FILEPATHS
-  | undefined {
+  AnalyticsMetadata_I_VERIFIED_THIS_IS_NOT_CODE_OR_FILEPATHS | undefined {
   const context = getAgentContext()
   if (!isSubagentContext(context) || !context.subagentName) {
     return undefined

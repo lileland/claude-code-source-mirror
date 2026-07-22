@@ -143,20 +143,16 @@ export async function reconcileMarketplaces(
     action: 'install' | 'update'
   }
   const work: WorkItem[] = [
-    ...diff.missing.map(
-      (name): WorkItem => ({
-        name,
-        source: normalizeSource(declared[name]!.source),
-        action: 'install',
-      }),
-    ),
-    ...diff.sourceChanged.map(
-      ({ name, declaredSource }): WorkItem => ({
-        name,
-        source: declaredSource,
-        action: 'update',
-      }),
-    ),
+    ...diff.missing.map((name): WorkItem => ({
+      name,
+      source: normalizeSource(declared[name]!.source),
+      action: 'install',
+    })),
+    ...diff.sourceChanged.map(({ name, declaredSource }): WorkItem => ({
+      name,
+      source: declaredSource,
+      action: 'update',
+    })),
   ]
 
   const skipped: string[] = []

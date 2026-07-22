@@ -64,10 +64,7 @@ export function hashPluginId(name: string, marketplace?: string): string {
  * - user-local: user added marketplace or local plugin
  */
 export type TelemetryPluginScope =
-  | 'official'
-  | 'org'
-  | 'user-local'
-  | 'default-bundle'
+  'official' | 'org' | 'user-local' | 'default-bundle'
 
 export function getTelemetryPluginScope(
   name: string,
@@ -86,26 +83,18 @@ export function getTelemetryPluginScope(
  * org-pushed; both are scope='official').
  */
 export type EnabledVia =
-  | 'user-install'
-  | 'org-policy'
-  | 'default-enable'
-  | 'seed-mount'
+  'user-install' | 'org-policy' | 'default-enable' | 'seed-mount'
 
 /** How a skill/command invocation was triggered. */
 export type InvocationTrigger =
-  | 'user-slash'
-  | 'claude-proactive'
-  | 'nested-skill'
+  'user-slash' | 'claude-proactive' | 'nested-skill'
 
 /** Where a skill invocation executes. */
 export type SkillExecutionContext = 'fork' | 'inline' | 'remote'
 
 /** How a plugin install was initiated. */
 export type InstallSource =
-  | 'cli-explicit'
-  | 'ui-discover'
-  | 'ui-suggestion'
-  | 'deep-link'
+  'cli-explicit' | 'ui-discover' | 'ui-suggestion' | 'deep-link'
 
 export function getEnabledVia(
   plugin: LoadedPlugin,
@@ -229,11 +218,7 @@ export function logPluginsEnabledForSession(
  * GROUP BY stays tractable.
  */
 export type PluginCommandErrorCategory =
-  | 'network'
-  | 'not-found'
-  | 'permission'
-  | 'validation'
-  | 'unknown'
+  'network' | 'not-found' | 'permission' | 'validation' | 'unknown'
 
 export function classifyPluginCommandError(
   error: unknown,

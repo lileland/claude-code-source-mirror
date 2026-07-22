@@ -47,9 +47,7 @@ function alwaysValidStatus(): boolean {
 }
 
 export type CCRInitFailReason =
-  | 'no_auth_headers'
-  | 'missing_epoch'
-  | 'worker_register_failed'
+  'no_auth_headers' | 'missing_epoch' | 'worker_register_failed'
 
 /** Thrown by initialize(); carries a typed reason for the diag classifier. */
 export class CCRInitError extends Error {

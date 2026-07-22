@@ -217,8 +217,7 @@ function decisionReasonToOTelSource(
       // the parsed Output from PermissionPromptToolResultSchema. Narrow at
       // runtime rather than widen the cross-file type.
       const toolResult = reason.toolResult as
-        | { decisionClassification?: string }
-        | undefined
+        { decisionClassification?: string } | undefined
       const classified = toolResult?.decisionClassification
       if (
         classified === 'user_temporary' ||

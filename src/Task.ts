@@ -13,11 +13,7 @@ export type TaskType =
   | 'dream'
 
 export type TaskStatus =
-  | 'pending'
-  | 'running'
-  | 'completed'
-  | 'failed'
-  | 'killed'
+  'pending' | 'running' | 'completed' | 'failed' | 'killed'
 
 /**
  * True when a task is in a terminal state and will not transition further.

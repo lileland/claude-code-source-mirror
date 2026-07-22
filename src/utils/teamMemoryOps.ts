@@ -9,8 +9,7 @@ export { isTeamMemFile }
  */
 export function isTeamMemorySearch(toolInput: unknown): boolean {
   const input = toolInput as
-    | { path?: string; pattern?: string; glob?: string }
-    | undefined
+    { path?: string; pattern?: string; glob?: string } | undefined
   if (!input) {
     return false
   }

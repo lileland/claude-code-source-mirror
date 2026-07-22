@@ -7,14 +7,7 @@ import { registerBundledSkill } from '../bundledSkills.js'
 type SkillContent = typeof import('./claudeApiContent.js')
 
 type DetectedLanguage =
-  | 'python'
-  | 'typescript'
-  | 'java'
-  | 'go'
-  | 'ruby'
-  | 'csharp'
-  | 'php'
-  | 'curl'
+  'python' | 'typescript' | 'java' | 'go' | 'ruby' | 'csharp' | 'php' | 'curl'
 
 const LANGUAGE_INDICATORS: Record<DetectedLanguage, string[]> = {
   python: ['.py', 'requirements.txt', 'pyproject.toml', 'setup.py', 'Pipfile'],

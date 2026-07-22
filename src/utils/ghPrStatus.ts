@@ -3,12 +3,7 @@ import { getBranch, getDefaultBranch, getIsGit } from './git.js'
 import { jsonParse } from './slowOperations.js'
 
 export type PrReviewState =
-  | 'approved'
-  | 'pending'
-  | 'changes_requested'
-  | 'draft'
-  | 'merged'
-  | 'closed'
+  'approved' | 'pending' | 'changes_requested' | 'draft' | 'merged' | 'closed'
 
 export type PrStatus = {
   number: number

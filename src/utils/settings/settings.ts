@@ -373,12 +373,7 @@ function getSettingsForSourceUncached(
  * Priority: remote > plist/hklm > file (managed-settings.json) > hkcu
  */
 export function getPolicySettingsOrigin():
-  | 'remote'
-  | 'plist'
-  | 'hklm'
-  | 'file'
-  | 'hkcu'
-  | null {
+  'remote' | 'plist' | 'hklm' | 'file' | 'hkcu' | null {
   // 1. Remote (highest)
   const remoteSettings = getRemoteManagedSettingsSyncFromCache()
   if (remoteSettings && Object.keys(remoteSettings).length > 0) {

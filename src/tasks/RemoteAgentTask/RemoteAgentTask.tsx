@@ -653,8 +653,7 @@ async function restoreRemoteAgentTasksImpl(
       startTime: meta.spawnedAt,
       pollStartedAt: Date.now(),
       remoteTaskMetadata: meta.remoteTaskMetadata as
-        | RemoteTaskMetadata
-        | undefined,
+        RemoteTaskMetadata | undefined,
     }
     registerTask(taskState, context.setAppState)
     void initTaskOutput(meta.taskId)
@@ -1000,8 +999,7 @@ function startRemoteSessionPolling(
       try {
         const appState = context.getAppState()
         const task = appState.tasks?.[taskId] as
-          | RemoteAgentTaskState
-          | undefined
+          RemoteAgentTaskState | undefined
         if (
           task?.isRemoteReview &&
           task.status === 'running' &&

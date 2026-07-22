@@ -182,8 +182,7 @@ export function computeStandaloneAgentContext(
   return {
     name: agentName ?? '',
     color: (agentColor === 'default' ? undefined : agentColor) as
-      | AgentColorName
-      | undefined,
+      AgentColorName | undefined,
   }
 }
 

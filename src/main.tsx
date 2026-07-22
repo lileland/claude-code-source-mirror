@@ -3040,8 +3040,7 @@ async function run(): Promise<CommanderCommand> {
       // Look up main thread agent from CLI flag or settings
       const agentSetting = agentCli ?? getInitialSettings().agent
       let mainThreadAgentDefinition:
-        | (typeof agentDefinitions.activeAgents)[number]
-        | undefined
+        (typeof agentDefinitions.activeAgents)[number] | undefined
       if (agentSetting) {
         mainThreadAgentDefinition = agentDefinitions.activeAgents.find(
           agent => agent.agentType === agentSetting,

@@ -589,8 +589,7 @@ async function countSkillTokens(
     const skillFrontmatter: SkillFrontmatter[] = skills.map(skill => ({
       name: getCommandName(skill),
       source: (skill.type === 'prompt' ? skill.source : 'plugin') as
-        | SettingSource
-        | 'plugin',
+        SettingSource | 'plugin',
       tokens: estimateSkillFrontmatterTokens(skill),
     }))
 

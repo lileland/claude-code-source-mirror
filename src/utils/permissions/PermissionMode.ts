@@ -24,12 +24,7 @@ export const externalPermissionModeSchema = lazySchema(() =>
 )
 
 type ModeColorKey =
-  | 'text'
-  | 'planMode'
-  | 'permission'
-  | 'autoAccept'
-  | 'error'
-  | 'warning'
+  'text' | 'planMode' | 'permission' | 'autoAccept' | 'error' | 'warning'
 
 type PermissionModeConfig = {
   title: string

@@ -33,10 +33,7 @@ const GCS_BUCKET_URL =
 class AutoUpdaterError extends ClaudeError {}
 
 export type InstallStatus =
-  | 'success'
-  | 'no_permissions'
-  | 'install_failed'
-  | 'in_progress'
+  'success' | 'no_permissions' | 'install_failed' | 'in_progress'
 
 export type AutoUpdaterResult = {
   version: string | null

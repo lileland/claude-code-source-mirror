@@ -249,7 +249,7 @@ async function applySortAndLimit(
   // copy is unreadable/empty, diverging from the no-stat readAllAndSort path.
   const seen = new Set<string>()
 
-  for (let i = 0; i < candidates.length && sessions.length < want; ) {
+  for (let i = 0; i < candidates.length && sessions.length < want;) {
     const batchEnd = Math.min(i + READ_BATCH_SIZE, candidates.length)
     const batch = candidates.slice(i, batchEnd)
     const results = await Promise.all(batch.map(readCandidate))

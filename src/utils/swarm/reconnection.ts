@@ -21,8 +21,7 @@ import { getTeamFilePath, readTeamFile } from './teamHelpers.js'
  * @returns The teamContext object to include in initialState, or undefined if not a teammate
  */
 export function computeInitialTeamContext():
-  | AppState['teamContext']
-  | undefined {
+  AppState['teamContext'] | undefined {
   // dynamicTeamContext is set in main.tsx from CLI args
   const context = getDynamicTeamContext()
 

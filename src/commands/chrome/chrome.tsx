@@ -21,10 +21,7 @@ const CHROME_EXTENSION_URL = 'https://claude.ai/chrome'
 const CHROME_PERMISSIONS_URL = 'https://clau.de/chrome/permissions'
 const CHROME_RECONNECT_URL = 'https://clau.de/chrome/reconnect'
 type MenuAction =
-  | 'install-extension'
-  | 'reconnect'
-  | 'manage-permissions'
-  | 'toggle-default'
+  'install-extension' | 'reconnect' | 'manage-permissions' | 'toggle-default'
 type Props = {
   onDone: (result?: string) => void
   isExtensionInstalled: boolean

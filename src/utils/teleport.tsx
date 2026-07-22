@@ -72,11 +72,7 @@ export type TeleportResult = {
   branchName: string
 }
 export type TeleportProgressStep =
-  | 'validating'
-  | 'fetching_logs'
-  | 'fetching_branch'
-  | 'checking_out'
-  | 'done'
+  'validating' | 'fetching_logs' | 'fetching_branch' | 'checking_out' | 'done'
 export type TeleportProgressCallback = (step: TeleportProgressStep) => void
 
 /**

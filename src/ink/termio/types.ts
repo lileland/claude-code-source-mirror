@@ -41,12 +41,7 @@ export type Color =
 
 /** Underline style variants */
 export type UnderlineStyle =
-  | 'none'
-  | 'single'
-  | 'double'
-  | 'curly'
-  | 'dotted'
-  | 'dashed'
+  'none' | 'single' | 'double' | 'curly' | 'dotted' | 'dashed'
 
 /** Text style attributes - represents current styling state */
 export type TextStyle = {

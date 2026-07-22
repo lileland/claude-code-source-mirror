@@ -10,8 +10,7 @@ import { C0, ESC_TYPE, isEscFinal } from './ansi.js'
 import { isCSIFinal, isCSIIntermediate, isCSIParam } from './csi.js'
 
 export type Token =
-  | { type: 'text'; value: string }
-  | { type: 'sequence'; value: string }
+  { type: 'text'; value: string } | { type: 'sequence'; value: string }
 
 type State =
   | 'ground'

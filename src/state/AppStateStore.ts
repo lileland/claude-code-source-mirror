@@ -79,12 +79,7 @@ export type SpeculationState =
 export const IDLE_SPECULATION_STATE: SpeculationState = { status: 'idle' }
 
 export type FooterItem =
-  | 'tasks'
-  | 'tmux'
-  | 'bagel'
-  | 'teams'
-  | 'bridge'
-  | 'companion'
+  'tasks' | 'tmux' | 'bagel' | 'teams' | 'bridge' | 'companion'
 
 export type AppState = DeepImmutable<{
   settings: SettingsJson
@@ -120,10 +115,7 @@ export type AppState = DeepImmutable<{
   // live event stream is open; 'reconnecting' = transient WS drop, backoff
   // in progress; 'disconnected' = permanent close or reconnects exhausted.
   remoteConnectionStatus:
-    | 'connecting'
-    | 'connected'
-    | 'reconnecting'
-    | 'disconnected'
+    'connecting' | 'connected' | 'reconnecting' | 'disconnected'
   // `claude assistant`: count of background tasks (Agent calls, teammates,
   // workflows) running inside the REMOTE daemon child. Event-sourced from
   // system/task_started and system/task_notification on the WS. The local

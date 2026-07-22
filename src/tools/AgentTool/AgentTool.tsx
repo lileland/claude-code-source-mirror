@@ -721,8 +721,7 @@ export const AgentTool = buildTool({
     // details, and use a simple user message for the prompt.
     let enhancedSystemPrompt: string[] | undefined
     let forkParentSystemPrompt:
-      | ReturnType<typeof buildEffectiveSystemPrompt>
-      | undefined
+      ReturnType<typeof buildEffectiveSystemPrompt> | undefined
     let promptMessages: MessageType[]
     if (isForkPath) {
       if (toolUseContext.renderedSystemPrompt) {

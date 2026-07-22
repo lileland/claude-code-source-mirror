@@ -100,6 +100,6 @@
     "url-handler-napi": "file:./shims/url-handler-napi"
   },
   "devDependencies": {
-    "prettier": "^3.8.1"
+    "prettier": "^3.9.6"
   }
 }

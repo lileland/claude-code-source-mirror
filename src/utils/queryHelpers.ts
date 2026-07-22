@@ -386,8 +386,7 @@ export function extractReadFilesFromMessages(
         ) {
           // Extract file_path and content from the Write tool use input
           const input = content.input as
-            | { file_path?: string; content?: string }
-            | undefined
+            { file_path?: string; content?: string } | undefined
           if (input?.file_path && input?.content) {
             // Normalize to absolute path for consistent cache lookups
             const absolutePath = expandPath(input.file_path, cwd)

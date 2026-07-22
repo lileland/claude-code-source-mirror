@@ -1353,10 +1353,7 @@ function getClassifierModel(): string {
  * then GrowthBook. Returns undefined when unset (caller decides default).
  */
 function resolveTwoStageClassifier():
-  | boolean
-  | 'fast'
-  | 'thinking'
-  | undefined {
+  boolean | 'fast' | 'thinking' | undefined {
   if (process.env.USER_TYPE === 'ant') {
     const env = process.env.CLAUDE_CODE_TWO_STAGE_CLASSIFIER
     if (env === 'fast' || env === 'thinking') return env
@@ -1413,11 +1410,7 @@ const POWERSHELL_DENY_GUIDANCE: readonly string[] = feature(
   : []
 
 type AutoModeOutcome =
-  | 'success'
-  | 'parse_failure'
-  | 'interrupted'
-  | 'error'
-  | 'transcript_too_long'
+  'success' | 'parse_failure' | 'interrupted' | 'error' | 'transcript_too_long'
 
 /**
  * Telemetry helper for tengu_auto_mode_outcome. All string fields are

@@ -309,8 +309,7 @@ export type CronJitterConfig = {
  * @internal
  */
 export type ScheduledTaskEvent =
-  | { type: 'fire'; task: CronTask }
-  | { type: 'missed'; tasks: CronTask[] }
+  { type: 'fire'; task: CronTask } | { type: 'missed'; tasks: CronTask[] }
 
 /**
  * Handle returned by `watchScheduledTasks()`.

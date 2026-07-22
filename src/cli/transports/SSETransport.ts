@@ -120,11 +120,7 @@ export function parseSSEFrames(buffer: string): {
 // ---------------------------------------------------------------------------
 
 type SSETransportState =
-  | 'idle'
-  | 'connected'
-  | 'reconnecting'
-  | 'closing'
-  | 'closed'
+  'idle' | 'connected' | 'reconnecting' | 'closing' | 'closed'
 
 /**
  * Payload for `event: client_event` frames, matching the StreamClientEvent

@@ -263,10 +263,7 @@ export type VimInputState = BaseInputState & {
  * Input modes for the prompt
  */
 export type PromptInputMode =
-  | 'bash'
-  | 'prompt'
-  | 'orphaned-permission'
-  | 'task-notification'
+  'bash' | 'prompt' | 'orphaned-permission' | 'task-notification'
 
 export type EditablePromptInputMode = Exclude<
   PromptInputMode,

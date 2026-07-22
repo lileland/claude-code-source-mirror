@@ -73,8 +73,7 @@ export function canUserConfigureAdvisor(): boolean {
 }
 
 export function getExperimentAdvisorModels():
-  | { baseModel: string; advisorModel: string }
-  | undefined {
+  { baseModel: string; advisorModel: string } | undefined {
   const config = getAdvisorConfig()
   return isAdvisorEnabled() &&
     !canUserConfigureAdvisor() &&
@@ -116,9 +115,7 @@ export function getAdvisorUsage(
   usage: BetaUsage,
 ): Array<BetaUsage & { model: string }> {
   const iterations = usage.iterations as
-    | Array<{ type: string }>
-    | null
-    | undefined
+    Array<{ type: string }> | null | undefined
   if (!iterations) {
     return []
   }

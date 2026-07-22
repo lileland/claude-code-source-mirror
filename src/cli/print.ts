@@ -1318,8 +1318,7 @@ function runHeadlessStreaming(
             const requestedSchema =
               'requestedSchema' in request.params
                 ? (request.params.requestedSchema as
-                    | Record<string, unknown>
-                    | undefined)
+                    Record<string, unknown> | undefined)
                 : undefined
 
             const elicitationId =
@@ -2113,8 +2112,7 @@ function runHeadlessStreaming(
                   ? input
                   : (
                       input.find(b => b.type === 'text') as
-                        | { type: 'text'; text: string }
-                        | undefined
+                        { type: 'text'; text: string } | undefined
                     )?.text
               if (typeof inputText === 'string') {
                 logSuggestionOutcome(

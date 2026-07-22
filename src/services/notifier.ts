@@ -138,11 +138,9 @@ async function isAppleTerminalBellDisabled(): Promise<boolean> {
     const plist = await import('plist')
     const parsed: Record<string, unknown> = plist.parse(defaultsOutput.stdout)
     const windowSettings = parsed?.['Window Settings'] as
-      | Record<string, unknown>
-      | undefined
+      Record<string, unknown> | undefined
     const profileSettings = windowSettings?.[currentProfile] as
-      | Record<string, unknown>
-      | undefined
+      Record<string, unknown> | undefined
 
     if (!profileSettings) {
       return false

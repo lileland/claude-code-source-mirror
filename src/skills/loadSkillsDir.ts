@@ -65,12 +65,7 @@ import { createSignal } from '../utils/signal.js'
 import { registerMCPSkillBuilders } from './mcpSkillBuilders.js'
 
 export type LoadedFrom =
-  | 'commands_DEPRECATED'
-  | 'skills'
-  | 'plugin'
-  | 'managed'
-  | 'bundled'
-  | 'mcp'
+  'commands_DEPRECATED' | 'skills' | 'plugin' | 'managed' | 'bundled' | 'mcp'
 
 /**
  * Returns a claude config directory path for a given source.

@@ -951,11 +951,7 @@ type ArchiveStatus = number | 'timeout' | 'error' | 'no_token'
 // which distinguishes ECONNABORTED from other network errors — both map to
 // 'network_error' here since the dominant cause in a 1.5s window is timeout).
 type ArchiveTelemetryStatus =
-  | 'ok'
-  | 'skipped_no_token'
-  | 'network_error'
-  | 'server_4xx'
-  | 'server_5xx'
+  'ok' | 'skipped_no_token' | 'network_error' | 'server_4xx' | 'server_5xx'
 
 async function archiveSession(
   sessionId: string,

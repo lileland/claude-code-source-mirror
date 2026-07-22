@@ -9,11 +9,7 @@ import {
 } from '../utils/auth.js'
 
 export type VerificationStatus =
-  | 'loading'
-  | 'valid'
-  | 'invalid'
-  | 'missing'
-  | 'error'
+  'loading' | 'valid' | 'invalid' | 'missing' | 'error'
 
 export type ApiKeyVerificationResult = {
   status: VerificationStatus

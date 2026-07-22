@@ -665,11 +665,7 @@ function formatResult(
       return {
         formatted: formatGoToDefinitionResult(
           result as
-            | Location
-            | Location[]
-            | LocationLink
-            | LocationLink[]
-            | null,
+            Location | Location[] | LocationLink | LocationLink[] | null,
           cwd,
         ),
         resultCount: validLocations.length,
@@ -779,11 +775,7 @@ function formatResult(
         // Reuse goToDefinition formatter since the result format is identical
         formatted: formatGoToDefinitionResult(
           result as
-            | Location
-            | Location[]
-            | LocationLink
-            | LocationLink[]
-            | null,
+            Location | Location[] | LocationLink | LocationLink[] | null,
           cwd,
         ),
         resultCount: validLocations.length,

@@ -36,9 +36,7 @@ type AgentSuggestionSource = {
 }
 
 type SuggestionSource =
-  | FileSuggestionSource
-  | McpResourceSuggestionSource
-  | AgentSuggestionSource
+  FileSuggestionSource | McpResourceSuggestionSource | AgentSuggestionSource
 
 /**
  * Creates a unified suggestion item from a source

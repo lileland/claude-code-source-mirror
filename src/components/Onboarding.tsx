@@ -26,12 +26,7 @@ import { PressEnterToContinue } from './PressEnterToContinue.js'
 import { ThemePicker } from './ThemePicker.js'
 import { OrderedList } from './ui/OrderedList.js'
 type StepId =
-  | 'preflight'
-  | 'theme'
-  | 'oauth'
-  | 'api-key'
-  | 'security'
-  | 'terminal-setup'
+  'preflight' | 'theme' | 'oauth' | 'api-key' | 'security' | 'terminal-setup'
 interface OnboardingStep {
   id: StepId
   component: React.ReactNode

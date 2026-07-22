@@ -38,10 +38,7 @@ const PERMANENT_CLOSE_CODES = new Set([
 type WebSocketState = 'connecting' | 'connected' | 'closed'
 
 type SessionsMessage =
-  | SDKMessage
-  | SDKControlRequest
-  | SDKControlResponse
-  | SDKControlCancelRequest
+  SDKMessage | SDKControlRequest | SDKControlResponse | SDKControlCancelRequest
 
 function isSessionsMessage(value: unknown): value is SessionsMessage {
   if (typeof value !== 'object' || value === null || !('type' in value)) {

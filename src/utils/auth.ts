@@ -206,10 +206,7 @@ export function getAuthTokenSource() {
 }
 
 export type ApiKeySource =
-  | 'ANTHROPIC_API_KEY'
-  | 'apiKeyHelper'
-  | '/login managed key'
-  | 'none'
+  'ANTHROPIC_API_KEY' | 'apiKeyHelper' | '/login managed key' | 'none'
 
 export function getAnthropicApiKey(): null | string {
   const { key } = getAnthropicApiKeyWithSource()
@@ -1912,8 +1909,7 @@ export function getAccountInformation() {
  * Result of org validation — either success or a descriptive error.
  */
 export type OrgValidationResult =
-  | { valid: true }
-  | { valid: false; message: string }
+  { valid: true } | { valid: false; message: string }
 
 /**
  * Validate that the active OAuth token belongs to the organization required

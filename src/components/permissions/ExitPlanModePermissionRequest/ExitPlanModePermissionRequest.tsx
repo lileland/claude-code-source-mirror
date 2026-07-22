@@ -302,8 +302,7 @@ export function ExitPlanModePermissionRequest({
 
   // Extract allowed prompts requested by the plan (Ant-only feature)
   const allowedPrompts = toolUseConfirm.input.allowedPrompts as
-    | AllowedPrompt[]
-    | undefined
+    AllowedPrompt[] | undefined
 
   // Get the raw plan to check if it's empty
   const rawPlan = inputPlan ?? getPlan()

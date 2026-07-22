@@ -558,8 +558,7 @@ function scanBashResultForGitOps(
 ): void {
   if (msg.type !== 'user') return
   const out = msg.toolUseResult as
-    | { stdout?: string; stderr?: string }
-    | undefined
+    { stdout?: string; stderr?: string } | undefined
   if (!out?.stdout && !out?.stderr) return
   // git push writes the ref update to stderr — scan both streams.
   const combined = (out.stdout ?? '') + '\n' + (out.stderr ?? '')

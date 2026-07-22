@@ -321,10 +321,7 @@ export function filterToolProgressMessages(
 export type ToolResult<T> = {
   data: T
   newMessages?: (
-    | UserMessage
-    | AssistantMessage
-    | AttachmentMessage
-    | SystemMessage
+    UserMessage | AssistantMessage | AttachmentMessage | SystemMessage
   )[]
   // contextModifier is only honored for tools that aren't concurrency safe.
   contextModifier?: (context: ToolUseContext) => ToolUseContext

@@ -58,11 +58,7 @@ export type WebSocketTransportOptions = {
 }
 
 type WebSocketTransportState =
-  | 'idle'
-  | 'connected'
-  | 'reconnecting'
-  | 'closing'
-  | 'closed'
+  'idle' | 'connected' | 'reconnecting' | 'closing' | 'closed'
 
 // Common interface between globalThis.WebSocket and ws.WebSocket
 type WebSocketLike = {

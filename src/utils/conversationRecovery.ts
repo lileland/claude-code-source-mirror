@@ -256,8 +256,7 @@ export function deserializeMessagesWithInterruptDetection(
  * into interrupted_prompt with a synthetic continuation message.
  */
 type InternalInterruptionState =
-  | TurnInterruptionState
-  | { kind: 'interrupted_turn' }
+  TurnInterruptionState | { kind: 'interrupted_turn' }
 
 /**
  * Determines whether the conversation was interrupted mid-turn based on the

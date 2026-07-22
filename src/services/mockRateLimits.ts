@@ -11,19 +11,12 @@ import type { OverageDisabledReason } from './claudeAiLimits.js'
 
 type MockHeaders = {
   'anthropic-ratelimit-unified-status'?:
-    | 'allowed'
-    | 'allowed_warning'
-    | 'rejected'
+    'allowed' | 'allowed_warning' | 'rejected'
   'anthropic-ratelimit-unified-reset'?: string
   'anthropic-ratelimit-unified-representative-claim'?:
-    | 'five_hour'
-    | 'seven_day'
-    | 'seven_day_opus'
-    | 'seven_day_sonnet'
+    'five_hour' | 'seven_day' | 'seven_day_opus' | 'seven_day_sonnet'
   'anthropic-ratelimit-unified-overage-status'?:
-    | 'allowed'
-    | 'allowed_warning'
-    | 'rejected'
+    'allowed' | 'allowed_warning' | 'rejected'
   'anthropic-ratelimit-unified-overage-reset'?: string
   'anthropic-ratelimit-unified-overage-disabled-reason'?: OverageDisabledReason
   'anthropic-ratelimit-unified-fallback'?: 'available'

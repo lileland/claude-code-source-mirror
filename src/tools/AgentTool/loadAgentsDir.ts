@@ -160,9 +160,7 @@ export type PluginAgentDefinition = BaseAgentDefinition & {
 
 // Union type for all agent types
 export type AgentDefinition =
-  | BuiltInAgentDefinition
-  | CustomAgentDefinition
-  | PluginAgentDefinition
+  BuiltInAgentDefinition | CustomAgentDefinition | PluginAgentDefinition
 
 // Type guards for runtime type checking
 export function isBuiltInAgent(
@@ -633,8 +631,7 @@ export function parseAgentFromMarkdown(
 
     // Parse permissionMode from frontmatter
     const permissionModeRaw = frontmatter['permissionMode'] as
-      | string
-      | undefined
+      string | undefined
     const isValidPermissionMode =
       permissionModeRaw &&
       (PERMISSION_MODES as readonly string[]).includes(permissionModeRaw)

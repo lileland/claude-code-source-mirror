@@ -463,9 +463,7 @@ export function AttachmentMessage({
       // runtime-gated blocks (feature() / isAgentSwarmsEnabled()) that TS can't
       // narrow through — excluded here via type union (compile-time only, no emit).
       attachment.type satisfies
-        | NullRenderingAttachmentType
-        | 'skill_discovery'
-        | 'teammate_mailbox'
+        NullRenderingAttachmentType | 'skill_discovery' | 'teammate_mailbox'
       return null
   }
 }

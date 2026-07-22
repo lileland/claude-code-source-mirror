@@ -337,11 +337,7 @@ export function getFastModeState(
 // Disabled reason returned by the API. The API is the canonical source for why
 // fast mode is disabled (free account, admin preference, extra usage not enabled).
 export type FastModeDisabledReason =
-  | 'free'
-  | 'preference'
-  | 'extra_usage_disabled'
-  | 'network_error'
-  | 'unknown'
+  'free' | 'preference' | 'extra_usage_disabled' | 'network_error' | 'unknown'
 
 // In-memory cache of the fast mode status from the API.
 // Distinct from the user's fastMode app state — this represents

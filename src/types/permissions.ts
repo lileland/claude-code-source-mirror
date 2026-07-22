@@ -86,11 +86,7 @@ export type PermissionRule = {
  * Where a permission update should be persisted
  */
 export type PermissionUpdateDestination =
-  | 'userSettings'
-  | 'projectSettings'
-  | 'localSettings'
-  | 'session'
-  | 'cliArg'
+  'userSettings' | 'projectSettings' | 'localSettings' | 'session' | 'cliArg'
 
 /**
  * Update operations for permission configuration
@@ -165,8 +161,7 @@ export type PermissionCommandMetadata = {
  * Metadata attached to permission decisions
  */
 export type PermissionMetadata =
-  | { command: PermissionCommandMetadata }
-  | undefined
+  { command: PermissionCommandMetadata } | undefined
 
 /**
  * Result when permission is granted

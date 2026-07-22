@@ -529,8 +529,7 @@ export function isPolicyAllowed(policy: string): boolean {
  * Get restrictions synchronously from session cache or file
  */
 function getRestrictionsFromCache():
-  | PolicyLimitsResponse['restrictions']
-  | null {
+  PolicyLimitsResponse['restrictions'] | null {
   if (!isPolicyLimitsEligible()) {
     return null
   }

@@ -136,8 +136,7 @@ export function isBinaryContentType(contentType: string): boolean {
 }
 
 export type PersistBinaryResult =
-  | { filepath: string; size: number; ext: string }
-  | { error: string }
+  { filepath: string; size: number; ext: string } | { error: string }
 
 /**
  * Write raw binary bytes to the tool-results directory with a mime-derived

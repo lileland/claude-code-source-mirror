@@ -759,8 +759,7 @@ const MessagesImpl = ({
       if (msg_6.type === 'collapsed_read_search') return true
       if (msg_6.type === 'assistant') {
         const b = msg_6.message.content[0] as unknown as
-          | AdvisorBlock
-          | undefined
+          AdvisorBlock | undefined
         return (
           b != null &&
           isAdvisorBlock(b) &&

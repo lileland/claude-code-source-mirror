@@ -2594,10 +2594,7 @@ export function ManagePlugins({
 
     // Build ServerInfo for MCPToolListView
     let server_3:
-      | StdioServerInfo
-      | SSEServerInfo
-      | HTTPServerInfo
-      | ClaudeAIServerInfo
+      StdioServerInfo | SSEServerInfo | HTTPServerInfo | ClaudeAIServerInfo
     if (configType_0 === 'stdio') {
       server_3 = {
         name: client_4.name,
@@ -2662,10 +2659,7 @@ export function ManagePlugins({
 
     // Build ServerInfo for MCPToolDetailView
     let server_4:
-      | StdioServerInfo
-      | SSEServerInfo
-      | HTTPServerInfo
-      | ClaudeAIServerInfo
+      StdioServerInfo | SSEServerInfo | HTTPServerInfo | ClaudeAIServerInfo
     if (configType_1 === 'stdio') {
       server_4 = {
         name: client_5.name,

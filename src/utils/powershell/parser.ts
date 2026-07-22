@@ -15,9 +15,7 @@ import { jsonParse } from '../slowOperations.js'
  * Maps directly to CommandBaseAst derivatives in System.Management.Automation.Language.
  */
 type PipelineElementType =
-  | 'CommandAst'
-  | 'CommandExpressionAst'
-  | 'ParenExpressionAst'
+  'CommandAst' | 'CommandExpressionAst' | 'ParenExpressionAst'
 
 /**
  * The AST node type for individual command elements (arguments, expressions).

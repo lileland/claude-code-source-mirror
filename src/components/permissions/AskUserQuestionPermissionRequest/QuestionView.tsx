@@ -430,8 +430,7 @@ export function QuestionView(t0) {
             options={options}
             defaultValue={
               questionStates[question.question]?.selectedValue as
-                | string[]
-                | undefined
+                string[] | undefined
             }
             onChange={values => {
               onUpdateQuestionState(
@@ -468,8 +467,7 @@ export function QuestionView(t0) {
             options={options}
             defaultValue={
               questionStates[question.question]?.selectedValue as
-                | string
-                | undefined
+                string | undefined
             }
             onChange={value_1 => {
               onUpdateQuestionState(

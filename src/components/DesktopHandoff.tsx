@@ -22,12 +22,7 @@ export function getDownloadUrl(): string {
   }
 }
 type DesktopHandoffState =
-  | 'checking'
-  | 'prompt-download'
-  | 'flushing'
-  | 'opening'
-  | 'success'
-  | 'error'
+  'checking' | 'prompt-download' | 'flushing' | 'opening' | 'success' | 'error'
 type Props = {
   onDone: (
     result?: string,

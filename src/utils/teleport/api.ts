@@ -347,8 +347,7 @@ export function getBranchFromSession(
  * following the Anthropic API messages spec.
  */
 export type RemoteMessageContent =
-  | string
-  | Array<{ type: string; [key: string]: unknown }>
+  string | Array<{ type: string; [key: string]: unknown }>
 
 /**
  * Sends a user message event to an existing remote session via the Sessions API

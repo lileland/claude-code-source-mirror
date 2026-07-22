@@ -8,9 +8,7 @@ import type {
 } from './types.js'
 
 export type ResolveResult =
-  | { type: 'match'; action: string }
-  | { type: 'none' }
-  | { type: 'unbound' }
+  { type: 'match'; action: string } | { type: 'none' } | { type: 'unbound' }
 
 export type ChordResolveResult =
   | { type: 'match'; action: string }

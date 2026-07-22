@@ -22,10 +22,7 @@ const MCP_TOOLS_THRESHOLD = 25_000 // 15k tokens
 
 export type ContextWarning = {
   type:
-    | 'claudemd_files'
-    | 'agent_descriptions'
-    | 'mcp_tools'
-    | 'unreachable_rules'
+    'claudemd_files' | 'agent_descriptions' | 'mcp_tools' | 'unreachable_rules'
   severity: 'warning' | 'error'
   message: string
   details: string[]

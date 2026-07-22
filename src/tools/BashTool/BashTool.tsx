@@ -857,8 +857,7 @@ export const BashTool = buildTool({
     const stdoutAccumulator = new EndTruncatingAccumulator()
     let stderrForShellReset = ''
     let interpretationResult:
-      | ReturnType<typeof interpretCommandResult>
-      | undefined
+      ReturnType<typeof interpretCommandResult> | undefined
     let progressCounter = 0
     let wasInterrupted = false
     let result: ExecResult

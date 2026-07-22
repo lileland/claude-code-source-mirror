@@ -56,8 +56,7 @@ const COMPACTABLE_TOOLS = new Set<string>([
 let cachedMCModule: typeof import('./cachedMicrocompact.js') | null = null
 let cachedMCState: import('./cachedMicrocompact.js').CachedMCState | null = null
 let pendingCacheEdits:
-  | import('./cachedMicrocompact.js').CacheEditsBlock
-  | null = null
+  import('./cachedMicrocompact.js').CacheEditsBlock | null = null
 
 async function getCachedMCModule(): Promise<
   typeof import('./cachedMicrocompact.js')
@@ -86,8 +85,7 @@ function ensureCachedMCState(): import('./cachedMicrocompact.js').CachedMCState 
  * Clears the pending state (caller must pin them after insertion).
  */
 export function consumePendingCacheEdits():
-  | import('./cachedMicrocompact.js').CacheEditsBlock
-  | null {
+  import('./cachedMicrocompact.js').CacheEditsBlock | null {
   const edits = pendingCacheEdits
   pendingCacheEdits = null
   return edits

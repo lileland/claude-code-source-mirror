@@ -123,8 +123,7 @@ class ShellCommandImpl implements ShellCommand {
   #maxOutputBytes: number
   #abortSignal: AbortSignal
   #onTimeoutCallback:
-    | ((backgroundFn: (taskId: string) => boolean) => void)
-    | undefined
+    ((backgroundFn: (taskId: string) => boolean) => void) | undefined
   #timeout: number
   #shouldAutoBackground: boolean
   #resultResolver: ((result: ExecResult) => void) | null = null
